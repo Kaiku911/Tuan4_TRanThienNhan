@@ -28,12 +28,15 @@
                 </div>
                 <div class="panel-footer clearfix">
                     <div class="pull-right">
-                        <a href="#" class="btn btn-primary">Order</a>
-                        @Html.ActionLink("Read more...", "Detail", new
-                   {
-                       id =
-                 item.masach
-                   }, new { @class = "btn btn-default" })
+                        @*<a href="#" class="btn btn-primary">Order</a>
+               @Html.ActionLink("Read more...", "Detail", new
+          {
+              id =
+        item.masach
+          }, new { @class = "btn btn-default" })*@
+                        <div class="DatMua">
+                            <a class="btn btn-success" href="@Url.Action("ThemGioHang", "GioHang",new { @id = item.masach, @strURL = Request.Url.ToString() })">Đặt mua</a>
+                        </div>
                     </div>
                 </div>
             </div>
